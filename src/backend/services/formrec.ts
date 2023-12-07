@@ -74,7 +74,8 @@ export class FormRec {
             label: label,
             aggregatedResults: results,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
 
 
@@ -104,7 +105,8 @@ export class FormRec {
             bpaId: input.bpaId,
             aggregatedResults: input.aggregatedResults,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
     }
 
@@ -161,7 +163,8 @@ export class FormRec {
             label: label,
             aggregatedResults: results,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
 
     }
@@ -188,7 +191,8 @@ export class FormRec {
             label: label,
             aggregatedResults: results,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
     }
 
@@ -214,7 +218,8 @@ export class FormRec {
             label: label,
             aggregatedResults: results,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
     }
 
@@ -344,7 +349,8 @@ export class FormRec {
             label: label,
             aggregatedResults: results,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
     }
 
@@ -364,7 +370,7 @@ export class FormRec {
         const config: AxiosRequestConfig = {
             headers: headers
         }
-        const url = `${this._endpoint}formrecognizer/documentModels/${modelId.modelId}:analyze?api-version=2022-06-30-preview`
+        const url = `${this._endpoint}formrecognizer/documentModels/${modelId.modelId}:analyze?api-version=2022-08-31`
         const data = {
             "urlSource": await this._getUrl(input.filename)
         }
@@ -382,7 +388,8 @@ export class FormRec {
             bpaId: input.bpaId,
             aggregatedResults: input.aggregatedResults,
             resultsIndexes: input.resultsIndexes,
-            id: input.id
+            id: input.id,
+            vector: input.vector
         }
 
 
